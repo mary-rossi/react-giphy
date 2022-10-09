@@ -2,7 +2,7 @@ import React from "react";
 
 function Header() {
     return (
-        <button>Header</button>
+       <h1>Welcome to Dog Giphy!</h1>    
     );
 }
 
