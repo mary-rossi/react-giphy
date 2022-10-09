@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./components/Button";
+import Giphy from "./components/Giphy";
 import Header from "./components/Header";
 import './App.css';
 
-function App() {
+export default function App() {
+  const [giphyImage, setGiphyImage] = useState({})
+  
+  const handleClick = async () => {
+    const giphyImage = `https://dog.ceo/api/breeds/image/random`
+
+    const response = await fetch(giphyImage)
+    const data = await response.json()
+    setGiphyImage(data)
+  };
+
   return (
     <div className="App">
-      <Header />
-      <Button />
-      
+    <Header/>
+     <Button handleClickButton={handleClick} />
+     <Giphy giphyImage={giphyImage}/>
     </div>
   );
 }
-
-export default App;

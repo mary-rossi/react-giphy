@@ -5,11 +5,11 @@ function Button(props) {
         props.handleClickButton();
     };
 
-    return (
+    return(
         <button 
         className="button" 
         type="button" 
-        onClick={handleClick}>New Giphy</button>
+        onClick={handleClick}>New Dog Giphy</button>
     );
 }
 
