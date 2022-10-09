@@ -1,8 +1,15 @@
 import React from "react";
 
-function Button() {
+function Button(props) {
+    const handleClick = () => {
+        props.handleClickButton();
+    };
+
     return (
-        <button>New Giphy</button>
+        <button 
+        className="button" 
+        type="button" 
+        onClick={handleClick}>New Giphy</button>
     );
 }
 
